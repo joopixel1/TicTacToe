@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.SecondFragment">
+
+    <data>
+        <variable name="model" type="com.example.tictactoe.api.models.GameViewModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="30dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:cardBackgroundColor="?android:attr/colorForeground"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <android.widget.Button
+                        android:id="@+id/button0"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:alpha="@{model.gridStr.charAt(0)==' ' ? 1.0F : 0.5F }"
+                        android:text='@{"" + model.gridStr.charAt(0)}'
+                        android:onClick="@{(v) -> model.play(v, 0)}"
+                        android:background="@drawable/custom_button_background"
+                        android:textColor="@color/black"
+                        android:textSize="50sp"/>
+
+                    <android.widget.Button
+                        android:id="@+id/button1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:alpha="@{model.gridStr.charAt(1)==' ' ? 1.0F : 0.5F }"
+                        android:text='@{""+model.gridStr.charAt(1)}'
+                        android:onClick="@{(v) -> model.play(v, 1)}"
+                        android:background="@drawable/custom_button_background"
+                        android:textColor="@color/black"
+                        android:textSize="50sp"/>
+
+                    <android.widget.Button
+                        android:id="@+id/button2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:alpha="@{model.gridStr.charAt(2)==' ' ? 1.0F : 0.5F}"
+                        android:text='@{""+model.gridStr.charAt(2)}'
+                        android:onClick="@{(v) -> model.play(v, 2)}"
+                        android:background="@drawable/custom_button_background"
+                        android:textColor="@color/black"
+                        android:textSize="50sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <android.widget.Button
+                        android:id="@+id/button3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:alpha="@{model.gridStr.charAt(3)==' ' ? 1.0F : 0.5F }"
+                        android:text='@{""+model.gridStr.charAt(3)}'
+                        android:onClick="@{(v) -> model.play(v, 3)}"
+                        android:background="@drawable/custom_button_background"
+                        android:textColor="@color/black"
+                        android:textSize="50sp"/>
+
+                    <android.widget.Button
+                        android:id="@+id/button4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:alpha="@{model.gridStr.charAt(4)==' ' ? 1.0F : 0.5F }"
+                        android:text='@{""+model.gridStr.charAt(4)}'
+                        android:onClick="@{(v) -> model.play(v, 4)}"
+                        android:background="@drawable/custom_button_background"
+                        android:textColor="@color/black"
+                        android:textSize="50sp"/>
+
+                    <android.widget.Button
+                        android:id="@+id/button5"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:alpha="@{model.gridStr.charAt(5)==' ' ? 1.0F : 0.5F }"
+                        android:text='@{""+model.gridStr.charAt(5)}'
+                        android:onClick="@{(v) -> model.play(v, 5)}"
+                        android:background="@drawable/custom_button_background"
+                        android:textColor="@color/black"
+                        android:textSize="50sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <android.widget.Button
+                        android:id="@+id/button6"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:alpha="@{model.gridStr.charAt(6)==' ' ? 1.0F : 0.5F }"
+                        android:text='@{""+model.gridStr.charAt(6)}'
+                        android:onClick="@{(v) -> model.play(v, 6)}"
+                        android:background="@drawable/custom_button_background"
+                        android:textColor="@color/black"
+                        android:textSize="50sp"/>
+
+                    <android.widget.Button
+                        android:id="@+id/button7"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:alpha="@{model.gridStr.charAt(7)==' ' ? 1.0F : 0.5F }"
+                        android:text='@{""+model.gridStr.charAt(7)}'
+                        android:onClick="@{(v) -> model.play(v, 7)}"
+                        android:background="@drawable/custom_button_background"
+                        android:textColor="@color/black"
+                        android:textSize="50sp"/>
+
+                    <android.widget.Button
+                        android:id="@+id/button8"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:alpha="@{model.gridStr.charAt(8)==' ' ? 1.0F : 0.5F }"
+                        android:text='@{""+model.gridStr.charAt(8)}'
+                        android:onClick="@{(v) -> model.play(v, 8)}"
+                        android:background="@drawable/custom_button_background"
+                        android:textColor="@color/black"
+                        android:textSize="50sp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+

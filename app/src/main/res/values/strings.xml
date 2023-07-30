@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TicTacToe</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+
+    <string name="single">SINGLEPLAYER</string>
+    <string name="multi">MULTIPLAYER</string>
+
+</resources>
